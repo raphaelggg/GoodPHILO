@@ -6,7 +6,7 @@
 #    By: ragolden <ragolden@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/20 15:15:18 by ragolden          #+#    #+#              #
-#    Updated: 2026/05/28 18:40:53 by ragolden         ###   ########.fr        #
+#    Updated: 2026/06/12 21:58:04 by ragolden         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
-	@echo "✨ Compilation terminée avec succès ! (./philo) ✨"
+	@echo "Compilation terminée avec succès ! (./philo)"
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
 	$(CC) $(CFLAGS) -I $(INC_DIR) -c $< -o $@
@@ -37,11 +37,11 @@ $(OBJ_DIR):
 
 clean:
 	@rm -rf $(OBJ_DIR)
-	@echo "🧹 Objets nettoyés."
+	@echo "Objets nettoyés."
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "🗑️  Exécutable supprimé."
+	@echo "Exécutable supprimé."
 
 re: fclean all
 
