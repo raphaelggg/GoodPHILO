@@ -1,4 +1,4 @@
-*This project has been created as part of the 42 curriculum by <ragolden>.*
+*This project has been created as part of the 42 curriculum by ragolden.*
 
 # Philosophers - The Dining Philosophers Problem
 
@@ -73,5 +73,3 @@ Claude (Anthropic) was used as an assistant during this project in the following
 - **Debugging:** Identifying potential data races and deadlock scenarios by describing the thread logic and asking for analysis of edge cases.
 - **Conceptual explanation:** Getting clearer explanations of memory model concepts (e.g., why a boolean flag must still be mutex-protected even if reads feel "atomic").
 - **Code review:** Asking for feedback on the structure of the monitoring loop and the fork-picking order to validate the asymmetric strategy.
-
-No code was generated or copy-pasted directly from AI output. All implementations were written and understood independently.

@@ -6,7 +6,7 @@
 /*   By: ragolden <ragolden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 19:20:52 by ragolden          #+#    #+#             */
-/*   Updated: 2026/05/29 17:33:56 by ragolden         ###   ########.fr       */
+/*   Updated: 2026/06/22 21:24:32 by ragolden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,13 +84,17 @@ void	*philo_routine(void *pointer)
 	if (philo->data->nb_philo == 1)
 		return (single_philo_routine(philo));
 	if (philo->philo_id % 2 == 0)
-		ft_usleep(10, philo->data);
+		ft_usleep(philo->data->time_to_eat, philo->data);
+	if (philo->philo_id == 3)
+		ft_usleep(philo->data->time_to_eat * 2, philo->data);
 	while (!is_dead(philo->data))
 	{
 		philo_eat(philo);
 		print_action(philo, SLEEP);
 		ft_usleep(philo->data->time_to_sleep, philo->data);
 		print_action(philo, THINK);
+		if (philo->data->nb_philo % 2 != 0)
+			ft_usleep(philo->data->time_to_eat, philo->data);
 	}
 	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: ragolden <ragolden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 18:17:30 by ragolden          #+#    #+#             */
-/*   Updated: 2026/05/21 11:53:40 by ragolden         ###   ########.fr       */
+/*   Updated: 2026/06/22 20:54:27 by ragolden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@ void	error_msg(void)
 {
 	ft_putstr_fd(2, "Invalid usage !\n");
 	ft_putstr_fd(2, "Correct format:\n");
-	ft_putstr_fd(2, "./philosophers <nb_of_philosophers>\n");
-	ft_putstr_fd(2, "<time_to_die> <time_to_eat> <time_to_sleep>\n");
+	ft_putstr_fd(2, "./philo <nb_of_philosophers> ");
+	ft_putstr_fd(2, "<time_to_die> <time_to_eat> <time_to_sleep> ");
+	ft_putstr_fd(2, "(optional) <nb_meals>\n");
 }
 
 int	good_format(char **av)
